@@ -21,7 +21,7 @@
 <li>最后攻击提权是栈上ROP，可以不需要栈迁移</li>
 <li>源码级攻击，不依赖编译结果</li>
 </ol>
-<p>自动化脚本(将于2024年2月1日发布)<a target="_blank" rel="noopener" href="https://github.com/CsomePro/House-of-Some">https://github.com/CsomePro/House-of-Some</a></p>
+<p>自动化脚本(将于2024年2月1日发布)<a target="_blank" rel="noopener" href="https://github.com/CsomePro/Some-of-House">https://github.com/CsomePro/Some-of-House</a></p>
 <h1 id="利用思路"><a href="#利用思路" class="headerlink" title="利用思路"></a>利用思路</h1><h2 id="构造任意地址写的fake-file"><a href="#构造任意地址写的fake-file" class="headerlink" title="构造任意地址写的fake file"></a>构造任意地址写的fake file</h2><p>首先回顾一下House of apple2 <a target="_blank" rel="noopener" href="https://bbs.kanxue.com/thread-273832.htm">https://bbs.kanxue.com/thread-273832.htm</a></p>
 <p>其中有一条链是如下进行的</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">_IO_wfile_overflow</span><br><span class="line">    _IO_wdoallocbuf</span><br><span class="line">        _IO_WDOALLOCATE</span><br><span class="line">            *(fp-&gt;_wide_data-&gt;_wide_vtable + <span class="number">0x68</span>)(fp)</span><br></pre></td></tr></table></figure>
