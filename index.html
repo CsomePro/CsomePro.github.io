@@ -8,7 +8,7 @@
 这里的v10没有检查负数，可以向bss段上方的数据中写入一字节
 这里的利用方法是一个小技巧，来自于got表的lazy函数注册逻辑，也就是checksec显示如下
 
-Lazy函数注册逻辑当ELF加载时，并...</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2024-03-31</span><i class="fa fa-tag"></i><a class="tag" href="/tags/CTF/" title="CTF">CTF </a><a class="tag" href="/tags/Pwn/" title="Pwn">Pwn </a><a class="tag" href="/tags/2023changchengbei/" title="2023changchengbei">2023changchengbei </a><span class="leancloud_visitors"></span><span>大约2546个字, 8分钟29秒读完</span></div></div></div></div><div class="post animated fadeInDown"><div class="post-title"><h3><a href="/p/house-of-some-2/">House of Some 2 —— 高版本Glibc的IO_FILE利用思路</a></h3></div><div class="post-content"><p>House of Some 2是独立的一条IO_FILE利用链，主要关注的函数是_IO_wfile_jumps_maybe_mmap中的_IO_wfile_underflow_maybe_mmap
+Lazy函数注册逻辑当ELF加载时，并...</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2024-03-31</span><i class="fa fa-tag"></i><a class="tag" href="/tags/CTF/" title="CTF">CTF </a><a class="tag" href="/tags/Pwn/" title="Pwn">Pwn </a><a class="tag" href="/tags/2023changchengbei/" title="2023changchengbei">2023changchengbei </a><span class="leancloud_visitors"></span><span>大约2554个字, 8分钟30秒读完</span></div></div></div></div><div class="post animated fadeInDown"><div class="post-title"><h3><a href="/p/house-of-some-2/">House of Some 2 —— 高版本Glibc的IO_FILE利用思路</a></h3></div><div class="post-content"><p>House of Some 2是独立的一条IO_FILE利用链，主要关注的函数是_IO_wfile_jumps_maybe_mmap中的_IO_wfile_underflow_maybe_mmap
 利用条件为
 
 已知libc地址
